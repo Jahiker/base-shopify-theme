@@ -1,19 +1,22 @@
-<h1>{{ collection.title }}</h1>
-<p>{{ collection.description }}</p>
+<div class="main-collection">
+  <h1>{{ collection.title }}</h1>
+  <p>{{ collection.description }}</p>
 
-<ul>
-  {% for product in collection.products %}
-    <li>
+  <ul>
+    {% for product in collection.products %}
+      <li>
       <a href="{{ product.url }}">
         {{ product.title }}
       </a>
     </li>
   {% endfor %}
-</ul>
+</ul> 
 
 {% schema %}
-  {
-    "name": "Main Collection",
-    "settings": []
-  }
+{
+  "name": "Main Collection",
+  "tag": "section",
+  "class": "main-collection__section",
+  "settings": []
+}
 {% endschema %}

@@ -1,50 +1,54 @@
-{% if cart.item_count > 0 %}
-  <h1>Cart</h1>
+<div class="main-cart">
+  {% if cart.item_count > 0 %}
+    <h1>Cart</h1>
 
-  <form action="/cart" method="post" novalidate>
-    <table>
-      <thead>
-        <tr>
-          <th colspan="2">Product</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Total</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for item in cart.items %}
+    <form action="{{ routes.cart_url }}" method="post" novalidate>
+      <table>
+        <thead>
           <tr>
-            <td>
-              <a href="{{ item.url }}">
-                <img src="{{ item.image | image_url: width: 100, height: 100 }}" alt="{{ item.title | escape }}">
-              </a>
-            </td>
-            <td>
-              <a href="{{ item.url }}">{{ item.product.title }}</a>
-            </td>
-            <td>{{ item.price | money }}</td>
-            <td>
-              <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0">
-            </td>
-            <td>{{ item.final_line_price | money }}</td>
+            <th colspan="2">Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
           </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {% for item in cart.items %}
+            <tr>
+              <td>
+                <a href="{{ item.url }}">
+                  <img src="{{ item.image | image_url: width: 100, height: 100 }}" alt="{{ item.title | escape }}">
+                </a>
+              </td>
+              <td>
+                <a href="{{ item.url }}">{{ item.product.title }}</a>
+              </td>
+              <td>{{ item.price | money }}</td>
+              <td>
+                <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0">
+              </td>
+              <td>{{ item.final_line_price | money }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
 
-    <div>
-      <p>Subtotal: {{ cart.total_price | money }}</p>
-      <button type="submit" name="update">Update cart</button>
-      <button type="submit" name="checkout">Checkout</button>
-    </div>
-  </form>
-{% else %}
-  <h2>Your cart is empty</h2>
-{% endif %}
+      <div>
+        <p>Subtotal: {{ cart.total_price | money }}</p>
+        <button type="submit" name="update">Update cart</button>
+        <button type="submit" name="checkout">Checkout</button>
+      </div>
+    </form>
+  {% else %}
+    <h2>Your cart is empty</h2>
+  {% endif %}
+</div>
 
 {% schema %}
-  {
-    "name": "Main Cart",
-    "settings": []
-  }
+{
+  "name": "Main Cart",
+  "tag": "section",
+  "class": "main-cart__section",
+  "settings": []
+}
 {% endschema %}
