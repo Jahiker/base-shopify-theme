@@ -135,3 +135,8 @@ config.test.yml
 .dylint/
 .dylint_driver/
 .dylint_generated/
+
+# Bundled assets
+/assets/bundle.css
+/assets/*.bundle.js
+/assets/bundle.bundle.js
