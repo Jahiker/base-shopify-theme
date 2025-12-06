@@ -1,0 +1,15 @@
+# Ignore everything in the root except for theme files
+*
+
+# Allow theme files
+!/assets/*
+!/config/*
+!/layout/*
+!/locales/*
+!/sections/*
+!/snippets/*
+!/templates/*
+
+# Allow specific files
+!.gitignore
+!.shopifyignore

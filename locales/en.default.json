@@ -1,0 +1,11 @@
+{
+  "general": {
+    "404": {
+      "title": "404",
+      "subtext": "Page not found"
+    },
+    "search": {
+      "placeholder": "Search"
+    }
+  }
+}

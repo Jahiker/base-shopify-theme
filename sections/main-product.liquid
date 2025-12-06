@@ -1,0 +1,10 @@
+<h1>{{ product.title }}</h1>
+<p>{{ product.description }}</p>
+<p>{{ product.price | money }}</p>
+
+{% schema %}
+  {
+    "name": "Main Product",
+    "settings": []
+  }
+{% endschema %}
