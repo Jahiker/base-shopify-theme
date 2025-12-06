@@ -1,1 +1,1 @@
-console.log("Hey! Happy Codding! 🧑‍💻");
+(()=>{"use strict";console.log("Hey! Happy Codding! 🧑‍💻")})();
