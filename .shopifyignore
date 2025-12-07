@@ -13,3 +13,11 @@
 # Allow specific files
 !.gitignore
 !.shopifyignore
+
+# Explicitly ignore development files
+package.json
+package-lock.json
+webpack.config.js
+postcss.config.mjs
+tailwind.config.js
+src
