@@ -23,7 +23,6 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'assets'),
-    clean: true,
   },
   mode: 'production',
   module: {
