@@ -5,12 +5,13 @@
   <ul>
     {% for product in collection.products %}
       <li>
-      <a href="{{ product.url }}">
-        {{ product.title }}
-      </a>
-    </li>
-  {% endfor %}
-</ul> 
+        <a href="{{ product.url }}">
+          {{ product.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
 
 {% schema %}
 {
