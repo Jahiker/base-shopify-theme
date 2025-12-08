@@ -1,23 +1,24 @@
-# Ignore everything in the root except for theme files
-*
+# OS generated files #
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
-# Allow theme files
-!/assets/*
-!/config/*
-!/layout/*
-!/locales/*
-!/sections/*
-!/snippets/*
-!/templates/*
-
-# Allow specific files
-!.gitignore
-!.shopifyignore
-
-# Explicitly ignore development files
+# Enviroment files #
+source
+build_tools
+node_modules
+.config
+.github
+.vscode
+.docs
+src/*
+src/public/*.json
 package.json
-package-lock.json
-webpack.config.js
-postcss.config.mjs
-tailwind.config.js
-src
+.gitignore
+gulpfile.js
+
+# Other files #
+/\.(txt|md|lock)$/
