@@ -8,12 +8,13 @@
     "theme_support_url": "https://support.shopify.com/"
   },
   {
-    "name": "t:settings_schema.logo.name",
+    "name": "t:settings_schema.global.settings.logo.label",
     "settings": [
       {
         "type": "image_picker",
         "id": "logo",
-        "label": "t:settings_schema.logo.settings.logo_image.label"
+        "label": "t:settings_schema.global.settings.logo.label",
+        "info": "t:settings_schema.global.settings.logo.info"
       },
       {
         "type": "range",
@@ -23,13 +24,106 @@
         "step": 10,
         "default": 100,
         "unit": "px",
-        "label": "t:settings_schema.logo.settings.logo_width.label"
+        "label": "t:settings_schema.global.settings.logo_width.label",
+        "info": "t:settings_schema.global.settings.logo_width.info"
       },
       {
         "type": "image_picker",
         "id": "favicon",
-        "label": "t:settings_schema.logo.settings.favicon.label",
-        "info": "t:settings_schema.logo.settings.favicon.info"
+        "label": "t:settings_schema.global.settings.favicon.label",
+        "info": "t:settings_schema.global.settings.favicon.info"
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.global.settings.colors.name",
+    "settings": [
+      {
+        "type": "color",
+        "id": "primary_color",
+        "label": "t:settings_schema.global.settings.colors.settings.primary_color.label",
+        "info": "t:settings_schema.global.settings.colors.settings.primary_color.info",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "secondary_color",
+        "label": "t:settings_schema.global.settings.colors.settings.secondary_color.label",
+        "info": "t:settings_schema.global.settings.colors.settings.secondary_color.info",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "tertiary_color",
+        "label": "t:settings_schema.global.settings.colors.settings.tertiary_color.label",
+        "info": "t:settings_schema.global.settings.colors.settings.tertiary_color.info",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "t:settings_schema.global.settings.colors.settings.background_color.label",
+        "info": "t:settings_schema.global.settings.colors.settings.background_color.info",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "t:settings_schema.global.settings.colors.settings.text_color.label",
+        "info": "t:settings_schema.global.settings.colors.settings.text_color.info",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "accent_color",
+        "label": "t:settings_schema.global.settings.colors.settings.accent_color.label",
+        "info": "t:settings_schema.global.settings.colors.settings.accent_color.info",
+        "default": "#ff0000"
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.global.settings.typography.name",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:settings_schema.global.settings.typography.settings.header__1.content"
+      },
+      {
+        "type": "font_picker",
+        "id": "type_header_font",
+        "default": "assistant_n4",
+        "label": "t:settings_schema.global.settings.typography.settings.type_header_font.label"
+      },
+      {
+        "type": "range",
+        "id": "heading_scale",
+        "min": 100,
+        "max": 150,
+        "step": 5,
+        "unit": "%",
+        "label": "t:settings_schema.global.settings.typography.settings.heading_scale.label",
+        "default": 100
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.global.settings.typography.settings.header__2.content"
+      },
+      {
+        "type": "font_picker",
+        "id": "type_body_font",
+        "default": "assistant_n4",
+        "label": "t:settings_schema.global.settings.typography.settings.type_body_font.label"
+      },
+      {
+        "type": "range",
+        "id": "body_scale",
+        "min": 100,
+        "max": 130,
+        "step": 5,
+        "unit": "%",
+        "label": "t:settings_schema.global.settings.typography.settings.body_scale.label",
+        "default": 100
       }
     ]
   }

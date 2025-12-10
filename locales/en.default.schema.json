@@ -1,0 +1,72 @@
+{
+  "settings_schema": {
+    "global": {
+      "settings": {
+        "logo": {
+          "label": "Logo",
+          "info": "Your store's logo"
+        },
+        "logo_width": {
+          "label": "Logo width",
+          "info": "Set the width of your logo"
+        },
+        "favicon": {
+          "label": "Favicon",
+          "info": "Your store's favicon"
+        },
+        "colors": {
+          "name": "Colors",
+          "settings": {
+            "primary_color": {
+              "label": "Primary color",
+              "info": "Main color for your theme"
+            },
+            "secondary_color": {
+              "label": "Secondary color",
+              "info": "Secondary color for your theme"
+            },
+            "tertiary_color": {
+              "label": "Tertiary color",
+              "info": "Tertiary color for your theme"
+            },
+            "background_color": {
+              "label": "Background color",
+              "info": "Background color for your theme"
+            },
+            "text_color": {
+              "label": "Text color",
+              "info": "Text color for your theme"
+            },
+            "accent_color": {
+              "label": "Accent color",
+              "info": "Accent color for your theme"
+            }
+          }
+        },
+        "typography": {
+          "name": "Typography",
+          "settings": {
+            "header__1": {
+              "content": "Headings"
+            },
+            "type_header_font": {
+              "label": "Heading font"
+            },
+            "heading_scale": {
+              "label": "Heading font size"
+            },
+            "header__2": {
+              "content": "Body"
+            },
+            "type_body_font": {
+              "label": "Body font"
+            },
+            "body_scale": {
+              "label": "Body font size"
+            }
+          }
+        }
+      }
+    }
+  }
+}
