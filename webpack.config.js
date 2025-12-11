@@ -2,12 +2,15 @@ const path = require('path');
 const glob = require('glob');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts'); // Import the plugin
+const CopyPlugin = require('copy-webpack-plugin');
 
-const jsEntryPoints = glob.sync('./src/**/*.js').reduce((acc, file) => {
-  const name = path.basename(file, path.extname(file));
-  acc[name] = path.resolve(__dirname, file);
-  return acc;
-}, {});
+const jsEntryPoints = glob.sync('./src/**/*.js')
+  .filter(file => !path.basename(file).includes('vendor.js'))
+  .reduce((acc, file) => {
+    const name = path.basename(file, path.extname(file));
+    acc[name] = path.resolve(__dirname, file);
+    return acc;
+  }, {});
 
 const cssEntryPoints = glob.sync('./src/**/*.css').reduce((acc, file) => {
   const name = path.basename(file, path.extname(file));
@@ -51,6 +54,18 @@ module.exports = {
     new RemoveEmptyScriptsPlugin(), // Add the plugin here
     new MiniCssExtractPlugin({
       filename: '[name].css',
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'src/vendor.js',
+          to: '[name][ext]',
+        },
+        {
+          from: 'src/**/*.{js,css,scss}.liquid',
+          to: '[name][ext]',
+        },
+      ],
     }),
   ],
 };

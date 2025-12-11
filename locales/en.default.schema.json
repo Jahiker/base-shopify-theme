@@ -65,6 +65,11 @@
               "label": "Body font size"
             }
           }
+        },
+        "mobile_breakpoint": {
+          "name": "Mobile breakpoint",
+          "label": "Mobile breakpoint",
+          "info": "The breakpoint at which the mobile menu is triggered (in pixels)"
         }
       }
     }

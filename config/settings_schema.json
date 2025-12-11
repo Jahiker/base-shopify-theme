@@ -126,5 +126,17 @@
         "default": 100
       }
     ]
+  },
+  {
+    "name": "t:settings_schema.global.settings.mobile_breakpoint.name",
+    "settings": [
+      {
+        "type": "number",
+        "id": "mobile_breakpoint",
+        "default": 990,
+        "label": "t:settings_schema.global.settings.mobile_breakpoint.label",
+        "info": "t:settings_schema.global.settings.mobile_breakpoint.info"
+      }
+    ]
   }
 ]

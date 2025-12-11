@@ -1,5 +1,5 @@
 {
-  "name": "oelo-store",
+  "name": "jr-development",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,7 @@
     "@babel/preset-env": "^7.28.5",
     "autoprefixer": "^10.4.22",
     "babel-loader": "^9.1.3",
+    "copy-webpack-plugin": "^13.0.1",
     "css-loader": "^7.1.2",
     "glob": "^13.0.0",
     "mini-css-extract-plugin": "^2.9.4",
